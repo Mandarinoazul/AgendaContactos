@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="description"
+    content="Agenda con html,css & js, by Daniel Cabrera"
+    />
+    <title>Agenda de contactos</title>
+    <link type="text/css" href="design.css" rel="stylesheet">
+    <link rel="icon" href="/Anexos/Danvae logo sin fondo.png" />
+    <!-- DATA TABLE -->
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">	
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+</head>
+
+<body>
+<section>
+    <nav>
+        <ul>
+          <li><a class="navMenu" href="#">Inicio</a></li>
+          <li><a class="navMenu" href="#">Sobre la aplicacion</a></li>
+          <li><a class="navMenu" href="#">Feautures</a></li>
+          <li><a class="navMenu" href="#">Contactos</a></li>
+          
+        </ul>
+      </nav>
+</section>
+
+<table>
+    <tr>
+        <td>
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off"
+                  onfind="event.preventDefault();onFormFind();"          
+            >
+                <div>
+                    <label>Nombre*</label><label class="validation-error hide" id="NombreValidationError">This field is required.</label>
+                    <input type="text" name="Nombre" id="Nombre">
+                </div>
+                <div>
+                    <label>Apellido</label>
+                    <input type="text" name="Apellido" id="Apellido">
+                </div>
+                <div>
+                    <label>Telefono</label>
+                    <input type="number" name="Telefono" id="Telefono">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" name="Email" id="Email">
+                </div>
+                <div  class="form-action-buttons">
+                    <input type="submit" value="Submit">
+                    <input type="find" value="Find">
+                </div>
+            </form>
+        </td>
+        <td>
+            <table class="list" id="Usuarios">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Telefono</th>
+                        <th>Email</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
+    
+<script src="scripts.js"></script>
+
+</body>
+
+
+
+
+
+
+</html>
